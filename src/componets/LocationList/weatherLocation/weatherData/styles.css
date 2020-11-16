@@ -1,0 +1,123 @@
+.weatherDataCont {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100&0.4+0,1+100;Blue+3D+%2314 */
+    background: -moz-linear-gradient(top,  rgba(122,188,255,0.4) 0%, rgba(96,171,248,0.66) 44%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(122,188,255,0.4) 0%,rgba(96,171,248,0.66) 44%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(122,188,255,0.4) 0%,rgba(96,171,248,0.66) 44%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#667abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+
+    margin-top: 0;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 2px solid navy;
+    border-top: 1 solid gray;
+    height: 100%;
+    line-height: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* weathertemperature*/
+
+.weatherTemperatureCont {
+    text-align: center;
+    padding: 0;
+    flex: 0 0 calc(55% - 10px);
+}
+
+.temperature {
+    display: inline-block;
+    margin:  2rem 0 1.5rem 0;
+    font-size: 2.9rem;
+    color: black;
+    font-weight: 900;
+}
+.temperature span {
+    color: navy;
+    font-size: 1.5rem;
+    margin-left: 0rem;
+}
+.iconTemperature {
+    padding-top: 17px;
+    font-size: 7.4rem;
+}
+@media only screen and (max-width: 768px) {
+    .weatherTemperatureCont {
+        padding-top: .5rem;
+        flex: 0 0 calc(50% - 10px);
+    }
+    
+    .temperature {
+        display: block;
+        margin: 0;
+        margin-top: 2rem;
+        font-size: 3rem;
+        color: black;
+        font-weight: 900;
+    }
+    .temperature span {
+        font-size: 1.4rem;
+        margin-left: 0;
+    }
+    .iconTemperature {
+        padding: 0;
+        font-size: 8rem;
+    }
+}
+/*weatherExtraInfo*/
+
+.weatherExtraInfoCont {
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-right-radius: 10px;
+    padding: 0;
+    text-align: center;
+    flex: 0 0 calc(45% - 10px);
+}
+
+.humidity, .wind {
+    padding-top: 15px;
+    margin: 0;
+    font-style: italic;
+    font-size: 16px;
+}
+.humidity span, .wind span {
+    display: block;
+    margin-top: 2rem;
+    color: navy;
+    font-weight: 600;
+    font-size: 1.7rem;
+} 
+.wind {
+    padding: 0 0 15px 0
+}
+@media only screen and (max-width: 768px) {
+    .humidity, .wind {
+
+        font-size: 2rem;
+    }
+    .wind {
+        margin-top: 3rem;
+    }
+    .humidity span, .wind span {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        display: block;
+    } 
+    .weatherExtraInfoCont {
+        flex: 0 0 calc(50% );
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+    .humidity, .wind {
+        font-size: 1.5rem;
+    }
+    .humidity span, .wind span {
+        font-size: 2rem;
+    } 
+}

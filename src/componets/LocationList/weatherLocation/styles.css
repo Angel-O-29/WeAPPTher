@@ -1,0 +1,99 @@
+.weatherLocationCont {
+    flex: 1 0 calc(50% - 1rem);
+    height: 100%;
+    height: 18rem;
+    margin: .2rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: inset 0px 0px 22px 9px rgba(0,0,128,0.63);
+    -moz-box-shadow: inset 0px 0px 22px 9px rgba(0,0,128,0.63);
+    box-shadow: inset 0px 0px 22px 9px rgba(0,0,128,0.63);
+    font-family: 'Roboto', sans-serif;
+    width: 55%;
+    transition: all .2s ease-in-out;
+}
+
+.weatherLocationCont:hover {
+    transform: scale(0.97);
+}
+.weatherLocationCont:Active {
+    transform: scale(0.95);
+}
+@media only screen and (max-width: 768px) {
+    .weatherLocationCont {
+        flex: 1 0 100%;
+        height: 17rem;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .weatherLocationCont {
+        min-width: 25.7rem;
+    }
+    .weatherLocationCont:last-child {
+        margin-bottom: 2rem;
+    }
+}
+.locationCont {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000080+0,000080+52&1+0,0.8+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,128,1) 0%, rgba(0,0,128,0.9) 52%, rgba(0,0,128,0.8) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,128,1) 0%,rgba(0,0,128,0.9) 52%,rgba(0,0,128,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,128,1) 0%,rgba(0,0,128,0.9) 52%,rgba(0,0,128,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000080', endColorstr='#cc000080',GradientType=0 ); /* IE6-9 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 0px;
+    height: 40px;
+}
+.locationCont h2 {
+    padding-top: 3px;
+    margin: 0;
+    font-size: 2rem;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    color: snow;
+}
+.loading {
+    font-size: 30px;
+    color: navy;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 768px) {
+
+    .loading {
+        font-size: 5rem;
+        height: 13rem;
+    }
+}
+
+/*font awesome psudp*/
+.locationList  > .weatherLocationCont::after {
+    display: none;
+    font-family: "Font Awesome 5 Solid";
+    position: relative;
+    content: "\f0ac";
+  } 
+  .weatherLocationCont > svg {
+    display: block;
+    color: #C4E8FC;
+    position: relative;
+    top: -96%; 
+    left: 4%;
+    font-size: 2.5rem;
+    font-weight: 400;
+  } 
+@media only screen and (max-width: 768px) {
+    .weatherLocationCont > svg {
+        top: -97%; 
+        left: 2%;
+        font-size: 2rem;
+      } 
+}

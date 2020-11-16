@@ -1,0 +1,11 @@
+.foreCastItemCont {
+    padding: .5rem;
+    margin-bottom: 4rem;
+    height: 13rem;
+}
+@media only screen and (max-width: 768px ) {
+    .foreCastItemCont {
+        margin-bottom: 4rem;
+        height: 14.5rem;
+    }
+}
