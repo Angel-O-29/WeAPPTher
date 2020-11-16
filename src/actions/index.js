@@ -9,8 +9,8 @@ export const GET_WEATHER ='GET_WEATHER';
 export const SET_UNITS ='SET_UNITS';
 export const SET_MENU_DISPLAY ='SET_MENU_DISPLAY';
 const api_Key ='dbe54650a9f2e7b5f7e01836c9980bf2'
-const forecastLink = 'http://api.openweathermap.org/data/2.5/forecast';
-const weatherLink = 'http://api.openweathermap.org/data/2.5/weather';
+const forecastLink = 'https://api.openweathermap.org/data/2.5/forecast';
+const weatherLink = 'https://api.openweathermap.org/data/2.5/weather';
 
 export const setCity = value => ({type: SET_CITY, value});
 
