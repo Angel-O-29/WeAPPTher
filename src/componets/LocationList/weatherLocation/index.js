@@ -7,13 +7,22 @@ import './styles.css';
 import PropTypes from 'prop-types'; // ES6
 
 
-const WeatherLocation = ({onWeatherLocationClick, units, city, data}) => (
+class WeatherLocation extends React.Component { 
+    shouldComponentUpdate(nextProps) {
+        const actual= this.props.city;
+        const next= nextProps.city;
+        return (actual !== next)
+    }
+    
+    render() {
+    const {onWeatherLocationClick, units, city, data} = this.props
+    return (
         <div className="weatherLocationCont" onClick={onWeatherLocationClick}>
             <Location city={city}/>
             <div style={{'height':'78%'}}>{data ? <Weatherdata data={data} units={units}/> : <div className='loading weatherDataCont'  ><FontAwesomeIcon icon='spinner' pulse/> </div> }</div>
         </div>
-        );
-
+        )}
+}
 WeatherLocation.propTypes = {
     city: PropTypes.string,
     data: PropTypes.object,
