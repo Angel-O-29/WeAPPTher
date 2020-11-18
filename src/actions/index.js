@@ -45,7 +45,7 @@ export const setSelectedCity = (payload) => {
                 const arrayList = GetArrayList(weather_data);
                 dispatch(setForecastData({city: payload[0], forecastData: arrayList}));
                 dispatch(setLoadForecastData('Loaded'));
-                console.log(arrayList)
+                //console.log(arrayList)
             }
         }).catch (err => {console.log('error: ' + err)}) 
         

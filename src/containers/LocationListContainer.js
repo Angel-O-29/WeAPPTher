@@ -20,10 +20,10 @@ class LocationListContainer extends React.Component {
     }
     componentDidUpdate(prevProps) {
         if (this.props.units === prevProps.units) {
-            console.log('iguales')
+            //console.log('iguales')
         } else {
             this.updateCityData()
-            console.log('diferentes')
+            //console.log('diferentes')
         }
     }
     updateCityData() {
@@ -34,7 +34,7 @@ class LocationListContainer extends React.Component {
         this.props.setWeather(data)
     }
     handleSelectedLocation = (city) => {
-        console.log('handleSelectedLocation');
+        //console.log('handleSelectedLocation');
         const data = [
             city.key,
             city.country,

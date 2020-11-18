@@ -10,7 +10,7 @@ class ForeCastExtendedContainer extends React.Component {
 
     handleCloseMenu = () => {
         this.props.setMenuDisplay(null);
-        console.log('handleSelectedLocation');
+        //console.log('handleSelectedLocation');
     }
     
     render() {
