@@ -1,7 +1,8 @@
-import React from 'react';
-import WeatherLocation from './weatherLocation';
+import React, {Suspense} from 'react';
 import PropTypes from 'prop-types'; // ES6
 import './styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const WeatherLocation = React.lazy(()=> import('./weatherLocation'))
 
 /*const cities2 = [
     'Caracas',
@@ -41,7 +42,9 @@ class LocationList extends React.Component {
         const {cities, units} = this.props;
         return (
             <div className="locationList">
+                <Suspense fallback={<div className='firstLoading'  > <div className='loadingText'>Cargando Pronostico actual del Clima...</div><FontAwesomeIcon icon='spinner' pulse/> </div>} >
                 {this.strToComponent(cities, units)} 
+                </Suspense>
             </div>
     );
     }

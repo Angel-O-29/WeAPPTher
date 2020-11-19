@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {Suspense} from 'react';
+import './styles.css';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ForCastItem from './forCastItem';
-//import {GetArrayList} from './../../services/transformWeather';
-import './styles.css';
+const ForeCastItem = React.lazy(() => import('./forCastItem'));
 
 
 function renderForCastItemDays(foreCastData, units) {
     let forecastItemArray = []
     if (foreCastData) {
         forecastItemArray= foreCastData.map((element, i) => {
-            return (<ForCastItem key={`forCastItem_${i}`} data={element.data} units={units} weekDay={element.weekDay}/>)})
+            return (
+                <Suspense fallback={<div className='loading'  ><FontAwesomeIcon icon='spinner' pulse/> </div>} >
+                    <ForeCastItem key={`forCastItem_${i}`} data={element.data} units={units} weekDay={element.weekDay}/>
+                </Suspense>
+            )})
     } else {
         renderProgress('hola')
     }
