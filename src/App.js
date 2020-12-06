@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 import './App.css';
 //import {store} from './store'; como vinculamos react-redux en el src/index.js no es necesario importarla
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas} from '@fortawesome/free-solid-svg-icons';
+import { faSpinner} from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const BarraContainer = React.lazy(() => import('./containers/BarraContainer')) ;  
@@ -10,7 +10,7 @@ const LocationListContainer = React.lazy(() => import('./containers/LocationList
 const ForeCastExtendedContainer = React.lazy(() => import('./containers/ForeCastExtendedContainer')) ; 
 //import { render } from '@testing-library/react';
 
-library.add(fab, fas);
+library.add(fab, faSpinner);
 
 const cities = [
   {city: 'Caracas', country: ''},
