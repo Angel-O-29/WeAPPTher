@@ -61,7 +61,6 @@ LocationListContainer.propTypes = {
 }
 const mapStateToProps = state => ({
     units: getInUseUnits(state),
-    //isSet: isSetForecastDataFromCities(state),
     citiesWeather: getWeatherCities(state),
     city: getActualCity(state)[0],
 })

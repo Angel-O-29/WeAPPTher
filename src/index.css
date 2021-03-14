@@ -2,6 +2,10 @@ html {
   font-size: 62.5%; /**es una transformacion necesaria para poder usar rem que mejoran la pag 1rem igual a 10px**/
   box-sizing: border-box;
   margin-top: 5.1rem;
+  
+  /*ocultar scroll mozilla y ie*/
+  -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
 }
 *, *:before, *:after {
   box-sizing: inherit;

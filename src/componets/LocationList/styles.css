@@ -1,6 +1,10 @@
 .locationList {
     display: flex;
     overflow-y: scroll;
+    
+  /*ocultar scroll mozilla y ie*/
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
     max-height: calc(100vh - 5.1rem);
     height: 100%;
     flex-wrap: wrap;

@@ -12,16 +12,17 @@ const api_Key ='dbe54650a9f2e7b5f7e01836c9980bf2'
 const forecastLink = 'https://api.openweathermap.org/data/2.5/forecast';
 const weatherLink = 'https://api.openweathermap.org/data/2.5/weather';
 
-export const setCity = value => ({type: SET_CITY, value});
 
 const setForecastData = value => { return ({type: SET_FORECAST_DATA, value})}
 const setLoadForecastData = value => { return ({type: SET_LOAD_FORECAST_DATA, value})}
 const setWeatherCity = value => { return ({type: SET_WEATHER, value})}
 const getWeatherCity = value => { return ({type: GET_WEATHER, value})}
 
+export const setCity = value => ({type: SET_CITY, value});
 export const setForecastDataClear = value => { return ({type: SET_FORECAST_DATA_CLEAR})}
 export const setUnits = value => ({type: SET_UNITS, value});
 export const setMenuDisplay = (value) => ({type: SET_MENU_DISPLAY, value});
+
 export const setSelectedCity = (payload) => {
     return (dispatch, getState) => {
         const units = payload.pop()
@@ -39,7 +40,7 @@ export const setSelectedCity = (payload) => {
             return
         }
         dispatch(setLoadForecastData(undefined));
-        return fetch(api_weather).then(data => data.json()).then(weather_data => {
+        fetch(api_weather).then(data => data.json()).then(weather_data => {
             //modifica el resultado de la promise (fetch)
             if (weather_data.cod === '200') {
                 const arrayList = GetArrayList(weather_data);

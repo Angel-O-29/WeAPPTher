@@ -7,6 +7,9 @@
     background: linear-gradient(to bottom,  rgba(208,228,247,0.96) 0%,rgba(115,177,231,0.96) 24%,rgba(10,119,213,0.96) 55%,rgba(83,159,225,0.96) 79%,rgba(135,188,234,0.96) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5d0e4f7', endColorstr='#f587bcea',GradientType=0 ); /* IE6-9 */
     overflow-y: scroll;
+      /*ocultar scroll mozilla y ie*/
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
     -webkit-box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 17px 2px rgba(0,0,0,0.75);
